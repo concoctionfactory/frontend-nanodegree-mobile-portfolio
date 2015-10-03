@@ -1,3 +1,25 @@
+To Run
+	open dist/index.html in web browser
+	clicking on Cam's Pizzera brings you to new page where pizza moves when you scroll
+	and dragging slide makes the pizza bigger or smaller
+
+
+Optimizations made in views/js/main
+
+	for pizza scrolling
+
+		function updatePositions
+			document.body.scrollTop was moved out of the for loop since it did not change
+			document.querySelectorAll was changed to document.getElementsByClassName and moved out of the function
+			% 5 calculation was replaced by count
+		and the amount of pizza was decreased from 200 to 64
+
+	for pizza resize
+		function changePizzaSizes
+			changed querySelectorAll to get getElementsByClassName and stored in variable
+			moved dx and newwidtht oustside of the for loop
+
+
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
